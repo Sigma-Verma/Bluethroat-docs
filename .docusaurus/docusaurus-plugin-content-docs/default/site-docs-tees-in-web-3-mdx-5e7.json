@@ -1,0 +1,27 @@
+{
+  "id": "tees-in-web3",
+  "title": "TEEs in Web3",
+  "description": "<PageBanner",
+  "source": "@site/docs/tees-in-web3.mdx",
+  "sourceDirName": ".",
+  "slug": "/tees-in-web3",
+  "permalink": "/tees-in-web3",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "TEEs in Web3"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Backdrop What are TEEs and adjacent technologies?",
+    "permalink": "/backdrop-tees-and-adjacent-tech"
+  },
+  "next": {
+    "title": "platform-profiles-and-architectures",
+    "permalink": "/platform-profiles-and-architectures"
+  }
+}

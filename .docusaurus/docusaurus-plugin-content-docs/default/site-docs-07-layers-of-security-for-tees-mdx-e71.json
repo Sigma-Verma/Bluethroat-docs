@@ -1,0 +1,26 @@
+{
+  "id": "layers-of-security-for-tees",
+  "title": "Layers of security for protocols building with TEEs",
+  "description": "<PageBanner",
+  "source": "@site/docs/07_layers-of-security-for-tees.mdx",
+  "sourceDirName": ".",
+  "slug": "/layers-of-security-for-tees",
+  "permalink": "/layers-of-security-for-tees",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Layers of security for protocols building with TEEs"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Dumb ways to get rekt w/ TEEs",
+    "permalink": "/dumb-ways-to-get-rekt-with-tees"
+  },
+  "next": {
+    "title": "Future Directions",
+    "permalink": "/future-directions"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "04B_aws-nitro-enclaves",
+  "title": "AWS Nitro Enclaves",
+  "description": "<PageBanner",
+  "source": "@site/docs/04B_aws-nitro-enclaves.mdx",
+  "sourceDirName": ".",
+  "slug": "/04B_aws-nitro-enclaves",
+  "permalink": "/04B_aws-nitro-enclaves",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7,
+    "title": "AWS Nitro Enclaves"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Platform Profiles and Architectures",
+    "permalink": "/platform-profiles-and-architectures"
+  },
+  "next": {
+    "title": "AWS Nitro Threat Vectors [PARANOID]",
+    "permalink": "/04C_aws-nitro-threat-vectors-paranoid"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "Platform/04A_aws-nitro-system",
+  "title": "AWS Nitro System",
+  "description": "<PageBanner",
+  "source": "@site/docs/Platform/04A_aws-nitro-system.mdx",
+  "sourceDirName": "Platform",
+  "slug": "/Platform/04A_aws-nitro-system",
+  "permalink": "/Platform/04A_aws-nitro-system",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6,
+    "title": "AWS Nitro System"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Contributors",
+    "permalink": "/contributors"
+  },
+  "next": {
+    "title": "AWS Nitro Enclaves",
+    "permalink": "/Platform/04B_aws-nitro-enclaves"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "04C_aws-nitro-threat-vectors-paranoid",
+  "title": "AWS Nitro Threat Vectors [PARANOID]",
+  "description": "<PageBanner",
+  "source": "@site/docs/04C_aws-nitro-threat-vectors-paranoid.mdx",
+  "sourceDirName": ".",
+  "slug": "/04C_aws-nitro-threat-vectors-paranoid",
+  "permalink": "/04C_aws-nitro-threat-vectors-paranoid",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8,
+    "title": "AWS Nitro Threat Vectors [PARANOID]"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Platform Profiles and Architectures",
+    "permalink": "/platform-profiles-and-architectures"
+  },
+  "next": {
+    "title": "Dstack - Decentralized Cloud TEEs",
+    "permalink": "/04D_dstack-decentralized-cloud-tees"
+  }
+}

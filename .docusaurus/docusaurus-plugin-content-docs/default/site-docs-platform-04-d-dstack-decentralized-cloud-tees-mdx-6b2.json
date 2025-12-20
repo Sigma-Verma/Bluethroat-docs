@@ -1,0 +1,23 @@
+{
+  "id": "Platform/04D_dstack-decentralized-cloud-tees",
+  "title": "Dstack - Decentralized Cloud TEEs",
+  "description": "<PageBanner",
+  "source": "@site/docs/Platform/04D_dstack-decentralized-cloud-tees.mdx",
+  "sourceDirName": "Platform",
+  "slug": "/Platform/04D_dstack-decentralized-cloud-tees",
+  "permalink": "/Platform/04D_dstack-decentralized-cloud-tees",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9,
+    "title": "Dstack - Decentralized Cloud TEEs"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "AWS Nitro Threat Vectors [PARANOID]",
+    "permalink": "/Platform/04C_aws-nitro-threat-vectors-paranoid"
+  }
+}

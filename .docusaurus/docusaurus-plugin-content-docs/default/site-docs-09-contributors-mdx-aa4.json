@@ -1,0 +1,22 @@
+{
+  "id": "contributors",
+  "title": "Contributors",
+  "description": "<PageBanner",
+  "source": "@site/docs/09-contributors.mdx",
+  "sourceDirName": ".",
+  "slug": "/contributors",
+  "permalink": "/contributors",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Contributors"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Future Directions",
+    "permalink": "/future-directions"
+  }
+}

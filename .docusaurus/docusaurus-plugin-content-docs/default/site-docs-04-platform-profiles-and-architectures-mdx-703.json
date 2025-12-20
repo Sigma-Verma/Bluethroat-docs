@@ -1,0 +1,26 @@
+{
+  "id": "platform-profiles-and-architectures",
+  "title": "Platform Profiles and Architectures",
+  "description": "<PageBanner",
+  "source": "@site/docs/04_platform-profiles-and-architectures.mdx",
+  "sourceDirName": ".",
+  "slug": "/platform-profiles-and-architectures",
+  "permalink": "/platform-profiles-and-architectures",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Platform Profiles and Architectures"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "TEEs in Web3",
+    "permalink": "/tees-in-web3"
+  },
+  "next": {
+    "title": "AWS Nitro System",
+    "permalink": "/Platforms/04A_aws-nitro-system"
+  }
+}

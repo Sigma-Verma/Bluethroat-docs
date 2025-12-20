@@ -1,0 +1,97 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "backdrop-tees-and-adjacent-tech",
+              "path": "/backdrop-tees-and-adjacent-tech",
+              "sidebar": "docs"
+            },
+            {
+              "id": "contributors",
+              "path": "/contributors",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dumb-ways-to-get-rekt-with-tees",
+              "path": "/dumb-ways-to-get-rekt-with-tees",
+              "sidebar": "docs"
+            },
+            {
+              "id": "future-directions",
+              "path": "/future-directions",
+              "sidebar": "docs"
+            },
+            {
+              "id": "index",
+              "path": "/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "layers-of-security-for-tees",
+              "path": "/layers-of-security-for-tees",
+              "sidebar": "docs"
+            },
+            {
+              "id": "platform-profiles-and-architectures",
+              "path": "/platform-profiles-and-architectures",
+              "sidebar": "docs"
+            },
+            {
+              "id": "Platforms/04A_aws-nitro-system",
+              "path": "/Platforms/04A_aws-nitro-system",
+              "sidebar": "docs"
+            },
+            {
+              "id": "Platforms/04B_aws-nitro-enclaves",
+              "path": "/Platforms/04B_aws-nitro-enclaves"
+            },
+            {
+              "id": "Platforms/04C_aws-nitro-threat-vectors-paranoid",
+              "path": "/Platforms/04C_aws-nitro-threat-vectors-paranoid",
+              "sidebar": "docs"
+            },
+            {
+              "id": "Platforms/04D_dstack-decentralized-cloud-tees",
+              "path": "/Platforms/04D_dstack-decentralized-cloud-tees",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tee-attacks-categorisation",
+              "path": "/tee-attacks-categorisation",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tees-in-web3",
+              "path": "/tees-in-web3",
+              "sidebar": "docs"
+            },
+            {
+              "id": "what-to-expect",
+              "path": "/what-to-expect",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/",
+                "label": "Executive Summary"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

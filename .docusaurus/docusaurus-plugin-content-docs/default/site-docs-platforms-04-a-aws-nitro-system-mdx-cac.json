@@ -1,0 +1,25 @@
+{
+  "id": "Platforms/04A_aws-nitro-system",
+  "title": "AWS Nitro System",
+  "description": "<PageBanner",
+  "source": "@site/docs/Platforms/04A_aws-nitro-system.mdx",
+  "sourceDirName": "Platforms",
+  "slug": "/Platforms/04A_aws-nitro-system",
+  "permalink": "/Platforms/04A_aws-nitro-system",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "AWS Nitro System"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Platform Profiles and Architectures",
+    "permalink": "/platform-profiles-and-architectures"
+  },
+  "next": {
+    "title": "AWS Nitro Threat Vectors [PARANOID]",
+    "permalink": "/Platforms/04C_aws-nitro-threat-vectors-paranoid"
+  }
+}

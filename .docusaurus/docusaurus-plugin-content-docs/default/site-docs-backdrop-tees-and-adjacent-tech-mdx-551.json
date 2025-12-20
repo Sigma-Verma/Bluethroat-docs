@@ -1,0 +1,27 @@
+{
+  "id": "backdrop-tees-and-adjacent-tech",
+  "title": "Backdrop What are TEEs and adjacent technologies?",
+  "description": "<PageBanner",
+  "source": "@site/docs/backdrop-tees-and-adjacent-tech.mdx",
+  "sourceDirName": ".",
+  "slug": "/backdrop-tees-and-adjacent-tech",
+  "permalink": "/backdrop-tees-and-adjacent-tech",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Backdrop What are TEEs and adjacent technologies?"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "What to expect out of the document",
+    "permalink": "/what-to-expect"
+  },
+  "next": {
+    "title": "TEEs in Web3",
+    "permalink": "/tees-in-web3"
+  }
+}
