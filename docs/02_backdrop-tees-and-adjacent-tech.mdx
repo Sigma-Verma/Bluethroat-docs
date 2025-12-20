@@ -321,64 +321,11 @@ Key architectural components:
 
 ### TEE & Secure Element Landscape
 
-```text
-  ↑  Higher Assurance / Tamper Resistance / EAL Level
-  |
-  |                ┌──────────────────────────────┐
-  |                │  STANDALONE SECURE DEVICES   │
-  |                │  (EAL6–EAL7 / FIPS 140-3 L3) │
-  |                │                              │
-  |                │  • Hardware Security Modules │
-  |                │  • Smartcards / SIM / eSIM   │
-  |                │  • YubiKey, NitroKey         │
-  |                │  • Payment SEs, JavaCard     │
-  |                └──────────────┬───────────────┘
-  |                               │
-  |                               │
-  |                ┌──────────────┴───────────────┐
-  |                │  CO-PROCESSOR TEEs / SEs     │
-  |                │  (EAL5–EAL6 / PSA L3)        │
-  |                │                              │
-  |                │  • Apple Secure Enclave (SEP)│
-  |                │  • Google Titan M / Titan    │
-  |                │  • TPM 2.0 / StrongBox SE    │
-  |                │  • Embedded Secure Elements  │
-  |                └──────────────┬───────────────┘
-  |                               │
-  |                               │
-  |                ┌──────────────┴───────────────┐
-  |                │   SOC / CPU PARTITION TEEs   │
-  |                │   (EAL2–EAL4+ / GP TEE PP)   │
-  |                │                              │
-  |                │  • Arm TrustZone / OP-TEE    │
-  |                │  • Qualcomm QSEE / Kinibi    │
-  |                │  • Huawei iTrustee / TEEgris │
-  |                │  • Arm CCA (Realms, RMM)     │
-  |                └──────────────┬───────────────┘
-  |                               │
-  |                               │
-  |                ┌──────────────┴───────────────┐
-  |                │    CPU-ASSISTED TEEs         │
-  |                │    (EAL2–EAL4, SW+HW mixed)  │
-  |                │                              │
-  |                │  • Intel SGX / TDX           │
-  |                │  • AMD SEV-SNP               │
-  |                │  • IBM PEF / s390x SE        │
-  |                │  • RISC-V Keystone           │
-  |                └──────────────┬───────────────┘
-  |                               │
-  |                               │
-  |                ┌──────────────┴───────────────┐
-  |                │   SOFTWARE-DEFINED TEEs      │
-  |                │   (EAL1–EAL2, Logical only)  │
-  |                │                              │
-  |                │  • AWS Nitro Enclaves        │
-  |                │  • gVisor / Kata Containers  │
-  |                │  • Enarx (CVM-hosted)        │
-  |                │  • Graphene / SCONE (SGX soft frameworks)
-  |                └──────────────────────────────┘
-  |
-```
+<img
+  src="/img/diagrams/tee-landscape.svg"
+  alt="TEE & Secure Element Landscape"
+  style={{ width: '100%', maxWidth: '900px', margin: '2rem auto', display: 'block' }}
+/>
 
 ---
 
