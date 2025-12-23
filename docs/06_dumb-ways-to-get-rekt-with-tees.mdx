@@ -100,7 +100,10 @@ They verify the attestation document only by checking **PCR-0** (the hash of the
 
 **Reality:**
 
-This is dangerously incomplete. Attestation proves much **more** than just the code running in your enclave. The attestation report contains multiple Platform Configuration Registers (PCRs), each representing a different part of the environment that impacts the enclave's security posture.
+If your policy only pins PCR0 and never constrains PCR1 / PCR 2 , you have:
+
+- No ability to distinguish “same app, different kernel line vs same kernel, different app.” which you might want to treat differently in KMS and governance policy.
+- No way to evolve your image (eg. rotate your kernels), while keeping a stable application identity (PCR2) for downstream consumers.
 
 **What Attestation Actually Proves**:
 
@@ -111,11 +114,12 @@ This is dangerously incomplete. Attestation proves much **more** than just the c
 - **PCR-4**: Instance ID of parent
 - **PCR-8**: Enclave image file signing certificate
 
-**Attack**: Attacker runs your EIF (matching PCR-0) but with a different kernel (PCR-1) that has known vulnerabilities. Or they run with a malicious application that manipulates behavior (PCR-2).
+**Why do you need these redundant checks ?**
 
-- **PCR-0 = Docker image content**
-- **PCR-1, PCR-2, etc. = everything else in the enclave deployment**
-- A secure Web3 protocol on TEEs will check *all relevant PCRs*, not just PCR-0 and the Dockerfile!
+Checking PCR1 and PCR2 in addition to PCR0 gives sharper control:
+
+- You can have policies like “only this kernel line and bootstrap are allowed, but app ramdisk may evolve (PCR1 pinned, PCR2 allowed to vary under a different KMS key).
+- Or “this app measurement must match for decryption, regardless of which which signed image produced it” (PCR2 pinned via kms:RecipentAttestation:PCR2).
 
 ---
 
