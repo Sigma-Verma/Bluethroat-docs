@@ -81,7 +81,19 @@ The architecture of Dstack, including Dstack-OS and Dstack-KMS. Dstack-OS provid
 * **`Dstack-guest-agent`**: A service running in CVM to serve containers' key derivation and attestation requests
 * **`meta-Dstack`**: A Yocto meta layer to build CVM guest images
 
-![Architecture Diagram](https://docs.bluethroatlabs.com/~gitbook/image?url=https%3A%2F%2F2614376789-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FR5ZbvslZgcvygtJvgtil%252Fuploads%252FSVfCS5CVWBRghwF6bnzr%252Fimage.png%3Falt%3Dmedia%26token%3Db4e60c38-c458-42dc-8e7d-9d5b67b7a5f8&width=768&dpr=4&quality=100&sign=51ffead&sv=2)
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/img/diagrams/Dstack/architecture.png"
+    alt="Architecture Diagram"
+    style={{ maxWidth: "90%", height: "auto" }}
+  />
+</div>
+
 
 ## Portable Confidential Containers
 
@@ -112,7 +124,19 @@ The architecture of Dstack-KMS combines on-chain governance through smart contra
     * The actual key derivation service runs as a peer-to-peer network of nodes, each within its own TEE instance.
     * The TEE's role here is not to be inherently trusted, but to provide a verifiable execution environment for the Dstack-KMS code. The code's measurement is verified against the digest stored in the `KmsAuth` contract.
 
-![Dstack-KMS Architecture](https://docs.bluethroatlabs.com/~gitbook/image?url=https%3A%2F%2F2614376789-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FR5ZbvslZgcvygtJvgtil%252Fuploads%252FTUu6q85OCFeOnHEux2Yc%252Fimage.png%3Falt%3Dmedia%26token%3D6af889b9-c192-4b90-92f6-268c3cc2b1cb&width=768&dpr=4&quality=100&sign=fa69c06b&sv=2)
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/img/diagrams/Dstack/kms.png"
+    alt="Dstack-KMS Architecture"
+    style={{ maxWidth: "90%", height: "auto" }}
+  />
+</div>
+
 
 Unlike Nitro Enclaves, where confidential workloads typically rely on a cloud provider’s KMS tied to that provider’s attestation and infrastructure, Dstack-KMS is provider-agnostic and controlled by smart contracts rather than a cloud operator. TEE attestation is used only to check that each node runs the approved KMS code; it is NOT treated as an infallible trust anchor.
 
@@ -145,7 +169,18 @@ This design directly serves **Assume Breach,** even if a TEE or node is compromi
 
 Dstack-OS is a minimal, purpose-built operating system image that boots inside the TEE (e.g., an Intel TDX Trusted Domain or an AMD SEV Secure VM). Its purpose is to provide a consistent, verifiable environment across different TEE implementations. Where Nitro Enclaves reuse Amazon’s Nitro Hypervisor and EC2 images with enclave-specific restrictions, Dstack-OS is built to tightly control the content and behavior of the TEE-resident environment. It provides a **Hardware Abstraction Layer** with a minimized operating system image that eliminates differences in underlying TEE hardware while reducing the attack surface. The HAL provides a consistent, secure runtime environment across diverse TEE implementations, supporting both portability and reliability.
 
-![Dstack-OS Diagram](https://docs.bluethroatlabs.com/~gitbook/image?url=https%3A%2F%2F2614376789-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FR5ZbvslZgcvygtJvgtil%252Fuploads%252F5LaFLc9Mb4dKkxpHk9bK%252Fimage.png%3Falt%3Dmedia%26token%3De5ab51d0-5e87-4406-a1f5-82eeb25ecbec&width=768&dpr=4&quality=100&sign=b6b2e621&sv=2)
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/img/diagrams/Dstack/dstack_os.png"
+    alt="Dstack-OS Diagram"
+    style={{ maxWidth: "90%", height: "auto" }}
+  />
+</div>
 
 #### **Secure & Verifiable Boot Chain**
 
@@ -175,7 +210,18 @@ To prevent an adversary from reverting an application to a previous state to exp
 
 Dstack’s decentralized code management framework bridges these two worlds by placing TEE application governance under smart contract control, creating a transparent and auditable system for application deployment and updates that aligns with Web3 principles of **Code is Law**.
 
-![Decentralized Code Management](https://docs.bluethroatlabs.com/~gitbook/image?url=https%3A%2F%2F2614376789-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FR5ZbvslZgcvygtJvgtil%252Fuploads%252Ff4JsePKqxiJQsWVclsmL%252FDecenCodeMgt.png%3Falt%3Dmedia%26token%3Df7051f39-00c6-443a-ba95-c8638eba9a73&width=768&dpr=4&quality=100&sign=eb220bf2&sv=2)
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/img/diagrams/Dstack/code.png"
+    alt="Decentralized Code Management"
+    style={{ maxWidth: "90%", height: "auto" }}
+  />
+</div>
 
 TEE hardware ensures that *some* specific binary runs as measured, but it does not enforce:
 
@@ -229,7 +275,18 @@ ZT-TLS aims to make “this domain → this TEE application under this governanc
 
 ZT-TLS creates a cryptographic binding between a domain name and a specific TEE application.
 
-![ZT-TLS Diagram](https://docs.bluethroatlabs.com/~gitbook/image?url=https%3A%2F%2F2614376789-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FR5ZbvslZgcvygtJvgtil%252Fuploads%252FBdWZe6chGridE9h1UlVg%252FZT-TLS.png%3Falt%3Dmedia%26token%3Dada0ee07-b048-4fd9-967a-1b4b691b0ad5&width=768&dpr=4&quality=100&sign=a8957b48&sv=2)
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/img/diagrams/Dstack/tls.png"
+    alt="ZT-TLS Diagram"
+    style={{ maxWidth: "90%", height: "auto" }}
+  />
+</div>
 
 * **TEE-Generated Certificates:** The Dstack-Gateway or an application using Dstack-Ingress generates its own TLS certificate internally, using its application-specific ECDSA key derived from Dstack-KMS. The private key never leaves the TEE.
 * **Certificate Authority Authorization (CAA):** DNS CAA records are configured for the domain to specify that only certificates from a specific issuing authority (that verifies TEE attestation) are valid. This prevents a malicious actor from going to a different Certificate Authority (like Let's Encrypt) to get a fraudulent certificate for the same domain.
