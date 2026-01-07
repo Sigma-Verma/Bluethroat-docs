@@ -59,7 +59,14 @@ const config = {
           alt: 'Bluethroat Labs',
           src: 'img/logo.png',
         },
-      },
+        items: [
+          {
+            href: 'https://bluethroatlabs.com',
+            label: 'Website',
+            position: 'right',
+          },
+        ],
+        },
       footer: {
         style: 'dark',
         links: [
