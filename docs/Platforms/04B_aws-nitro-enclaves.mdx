@@ -50,7 +50,18 @@ Where a general Nitro instance gives you strong isolation from other tenants and
 
 ## How it works
 
-![Nitro Enclave Application Management Flowchart](https://docs.bluethroatlabs.com/~gitbook/image?url=https%3A%2F%2F2614376789-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FR5ZbvslZgcvygtJvgtil%252Fuploads%252FevQZL2mBmgm5WjWxdddI%252Fimage.png%3Falt%3Dmedia%26token%3D38ccce6d-5523-407f-bb38-75ad4a8468a3&width=768&dpr=4&quality=100&sign=b881269b&sv=2)
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/img/diagrams/nitro-enclaves/mgmt-flowchart.png"
+    alt="Nitro Enclave Application Management Flowchart  Diagram"
+    style={{ maxWidth: "90%", height: "auto" }}
+  />
+</div>
 
 - The application is first built and converted to a nitro supported image called Enclave Image File (EIF) using Nitro CLI.
 
@@ -169,17 +180,50 @@ The enclaves are isolated from external sources and hence cannot directly commun
 
 #### External to enclave communication
 
-![External to enclave communication](https://docs.bluethroatlabs.com/~gitbook/image?url=https%3A%2F%2F2614376789-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FR5ZbvslZgcvygtJvgtil%252Fuploads%252Fw7XfkdyxxcqZ1M9ojW2g%252Fimage.png%3Falt%3Dmedia%26token%3D89db95a2-58a2-48f9-95d3-30462e099c58&width=768&dpr=4&quality=100&sign=4e613fc7&sv=2)
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/img/diagrams/nitro-enclaves/external-enclave.png"
+    alt="External to enclave communication Diagram"
+    style={{ maxWidth: "90%", height: "auto" }}
+  />
+</div>
 
 #### Enclave to external communication (required during fetching shards from nodes)
 
 Nitro enclaves uses the vSock proxy to call the external endpoint through the parent instance's networking.
 
-![Enclave to external communication](https://docs.bluethroatlabs.com/~gitbook/image?url=https%3A%2F%2F2614376789-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FR5ZbvslZgcvygtJvgtil%252Fuploads%252FY2Kx1iwdMoK2EKsgCGu4%252Fimage.png%3Falt%3Dmedia%26token%3D128168a6-f409-4006-89a9-0154f5883e93&width=768&dpr=4&quality=100&sign=cadf07e4&sv=2)
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/img/diagrams/nitro-enclaves/enclave-external.png"
+    alt="Enclave to external communication Diagram"
+    style={{ maxWidth: "90%", height: "auto" }}
+  />
+</div>
 
 ### AWS KMS Integration
 
-![AWS KMS Integration](https://docs.bluethroatlabs.com/~gitbook/image?url=https%3A%2F%2F2614376789-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FR5ZbvslZgcvygtJvgtil%252Fuploads%252FTbmIGZVRAakzq4WQeAqj%252Fimage.png%3Falt%3Dmedia%26token%3Dd6e7e8a5-96af-435d-9d17-73854c8a9fdb&width=768&dpr=4&quality=100&sign=6177e3&sv=2)
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/img/diagrams/nitro-enclaves/kms-integration.png"
+    alt="kms-integration Diagram"
+    style={{ maxWidth: "90%", height: "auto" }}
+  />
+</div>
 
 Nitro Enclaves includes built-in support for attestation with AWS KMS:
 
