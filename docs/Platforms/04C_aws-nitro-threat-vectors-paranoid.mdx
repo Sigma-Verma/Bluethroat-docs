@@ -83,7 +83,7 @@ import PageBanner from '@site/src/components/PageBanner';
 
 1. **Attestation forgery by compromised Nitro hypervisor or signing key**
     - Path: Hypervisor private key or signing oracle compromised (or AWS operator coerced) → produce attestation docs for attacker-owned enclave image → request KMS to unwrap secrets or convince remote services.
-    - Mitigations: Verify attestation chains outside provider trust: require offline root CA you control, use multi-party attestation checks, restrict KMS policies to only the exact MRENCLAVE/MRSIGNER hash you expect (and monitor). ([Reference](https://docs.aws.amazon.com/enclaves/latest/user/set-up-attestation.html))
+    - Mitigations: Verify attestation chains outside provider trust: require offline root CA you control, use multi-party attestation checks, restrict KMS policies to only the exact PCR0/PCR8 hash you expect (and monitor). ([Reference](https://docs.aws.amazon.com/enclaves/latest/user/set-up-attestation.html))
 
 2. **Replay or redirect attestation (TOCTOU / replay)**
     - Path: Attestation doc replayed to remote verifier after enclave replaced or revoked; or remote verifier uses weak nonce/nonce-checks.
@@ -115,7 +115,7 @@ import PageBanner from '@site/src/components/PageBanner';
 
 9. **Remote verifier trusting wrong fields / broken verification logic**
     - Path: Verifier parses attestation and trusts wrong hash or interprets measurement of some field the attacker controls. Trail of Bits and others point out pitfalls checking enclave images and attestation. ([Reference](https://blog.trailofbits.com/2024/02/16/a-few-notes-on-aws-nitro-enclaves-images-and-attestation/))
-    - Mitigations: Implement strict verification logic (compare exact MRENCLAVE/MRSIGNER, check nonce/timestamp, verify signature chain to a trusted root).
+    - Mitigations: Implement strict verification logic (compare exact PCR0/PCR8, check nonce/timestamp, verify signature chain to a trusted root).
 
 ## Mitigation checklist
 
@@ -127,7 +127,7 @@ import PageBanner from '@site/src/components/PageBanner';
     - Verify attestation signature chain against a root you control or use multi-party attestation (do not blindly trust AWS consoles). Require challenge nonces. Lock KMS key policy to exact enclave measurements. ([Reference](https://docs.aws.amazon.com/enclaves/latest/user/set-up-attestation.html))
 
 - **Reproducible builds & provenance**
-    - Reproducible builds so you can publish expected MRENCLAVE and MRSIGNER values; keep deterministic build artifacts. Use SBOM and signed build artifacts.
+    - Reproducible builds so you can publish expected PCR0 and PCR8 values; keep deterministic build artifacts. Use SBOM and signed build artifacts.
 
 - **Least privilege for KMS/IAM**
     - Key policies that require attestation with exact measurement plus other contextual constraints. Rotate keys. Audit key access.
@@ -152,7 +152,7 @@ import PageBanner from '@site/src/components/PageBanner';
 
 ## Detection & validation actions
 
-- **Attestation verification logs**: log each attestation (nonce, MRENCLAVE, signature), compare to expected list. Flag any new MRENCLAVE.
+- **Attestation verification logs**: log each attestation (nonce, PCR0, signature), compare to expected list. Flag any new PCR0.
 
 - **KMS anomaly detection**: alert on unusual KMS decrypt/unseal calls, especially from not-previously-seen enclaves.
 
@@ -182,11 +182,11 @@ import PageBanner from '@site/src/components/PageBanner';
 
 ## What can be done immediately
 
-1. Lock down KMS key policy to exact MRENCLAVE and require nonce-based challenge. ([Reference](https://docs.aws.amazon.com/enclaves/latest/user/set-up-attestation.html))
+1. Lock down KMS key policy to exact PCR0 and require nonce-based challenge. ([Reference](https://docs.aws.amazon.com/enclaves/latest/user/set-up-attestation.html))
 
 2. Minimize enclave surface and harden message parsing code.
 
-3. Implement reproducible builds and publish expected MRENCLAVE/MRSIGNER.
+3. Implement reproducible builds and publish expected PCR0/PCR8.
 
 4. Deploy robust logging and alerts for attestation/KMS events.
 
